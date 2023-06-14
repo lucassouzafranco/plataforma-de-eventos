@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criacao_conta</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <div class = "Cadastro">
+        <form action="" method = "post">
+            <label for="Nome Completo">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="E-mail">E-mail</label>
+            <input type="text" id="E-mail" name="E_mail" required>
+
+            <label for="Senha">Senha</label>
+            <input type="Senha" id="Senha" name="Senha" required>
+
+            <div class="caixa_tipo_usuario">
+                <label for="Tipo_usuario">Com qual intuito deseja usar o site?</label>
+                <label for="organizador">
+                    <input type="checkbox" id="organizador" name="organizador">
+                    organizador
+                </label>
+            
+                <label for="participante">
+                    <input type="checkbox" id=" participante" name=" participante">
+                    participante
+                </label>
+            
+                <label for="opcao3">
+                    <input type="checkbox" id="administrador" name="administrador">
+                    administrador
+                </label>               
+            </div>
+            <input type="submit" value="Cadastrar">
+            <div class = "login">
+                <p>Possui conta?<a href="login.html"> Login</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
