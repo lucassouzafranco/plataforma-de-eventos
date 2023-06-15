@@ -1,79 +1,65 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "Dados_eventos";
-    $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+$host = "localhost";
+$db_name = "Eventos";
+$username = "root";
+$password = "";
 
+// Criar conexão
+$conn = new mysqli($host, $username, $password, $db_name);
+
+// Checar conexão
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
     //conexão
-    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    //verificação
-    if($conn->connect_error){
-        die("Falha na conexão do servidor");
-    }
+    /*CREATE database Eventos;
+    CREATE TABLE users (
+    id INT(6) UNSIGNED AUTO_INCREMENT,
+    nome VARCHAR(40) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    senha VARCHAR(25) NOT NULL,
+    tipo_usuario ENUM('organizador', 'participante', 'administrador') NOT NULL,
+    PRIMARY KEY (id)
+);
 
-    if($conn->query($sql)===false){
-        echo("Erro na criação do banco de dados".$conn->error);
-        $conn->close();
-    }
-    $conn->select_db($dbname);
+CREATE TABLE events (
+    id INT(6) UNSIGNED AUTO_INCREMENT,
+    titulo VARCHAR(45) NOT NULL,
+    descricao VARCHAR(200) NOT NULL,
+    data_evento DATE NOT NULL,
+    hora TIME NOT NULL,
+    local VARCHAR(45),
+    categoria VARCHAR(45),
+    preco DECIMAL(10, 2),
+    imagem LONGBLOB,
+    PRIMARY KEY (id)
+);
 
-    $sql = "CREATE TABLE USERS(
-        ID integer(6) unsigned  auto_increment,
-        nome varchar(40) not null,
-        email varchar(40) not null,
-        senha varchar(25) not null,
-        Tipo_usuario varchar(20) not null,
-        primary key(ID)
-    )";
-    if($conn->query($sql)===FALSE){
-        echo("Não foi possivel criar a tabela USERS".$conn->error);
-    }
+CREATE TABLE registrations (
+    id INT(6) UNSIGNED AUTO_INCREMENT,
+    id_usuario INT(6) UNSIGNED,
+    id_evento INT(6) UNSIGNED,
+    status_pagamento ENUM('pendente', 'pago') NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_usuario) REFERENCES users (id),
+    FOREIGN KEY (id_evento) REFERENCES events (id)
+);
 
-    $sql = "CREATE TABLE EVENTS(
-        titulo varchar(45) not null,
-        descrição varchar(200) not null,
-        data_evento date not null,
-        hora time not null,
-        local_evento varchar(45),
-        categoria varchar(20) not null,
-        preco varchar(5),
-        imagem LONGBLOB,
-        primary key(titulo)
-    )";
-    if($conn->query($sql)===FALSE){
-        echo("Não foi possivel criar a tabela EVENTS".$conn->error);
-    }
+CREATE TABLE reviews (
+    id INT(6) UNSIGNED AUTO_INCREMENT,
+    id_usuario INT(6) UNSIGNED,
+    id_evento INT(6) UNSIGNED,
+    pontuacao INT(2) NOT NULL,
+    comentario VARCHAR(100),
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_usuario) REFERENCES users (id),
+    FOREIGN KEY (id_evento) REFERENCES events (id)
+);
 
-    $sql = "CREATE TABLE REGISTRATIONS(
-        ID_usuario integer(6),
-        evento varchar(45),
-        status_pagamento varchar(10) ,
-        FOREIGN KEY(ID_usuario) references USERS(ID),
-        FOREIGN KEY(evento) references EVENTS(titulo) 
-
-    )";
-    if($conn->query($sql)===FALSE){
-        echo("Não foi possivel criar a tabela REGISTRATIONS".$conn->error);
-    }
-
-    $sql = "CREATE TABLE REVIEWS(
-        comentarios varchar(100),
-        usuario integer(6),
-        evento varchar(45),
-        pontuacao integer(2),
-        FOREIGN KEY (usuario) references USERS(ID),
-        FOREIGN KEY (evento) references EVENTS(titulo)
-    )";
-    if($conn->query($sql)===FALSE){
-        echo("Não foi possivel criar a tabela REVIEWS".$conn->error);
-    }
-
-    $sql = "CREATE TABLE CATEGORIES(
-        categoria_evento varchar(45)
-    )";
-    if($conn->query($sql)===FALSE){
-        echo("Não foi possivel criar a tabela CATEGORIES".$conn->error);
-    }
-?>
+CREATE TABLE categories (
+    id INT(6) UNSIGNED AUTO_INCREMENT,
+    nome VARCHAR(45),
+    PRIMARY KEY (id)
+);
+*/
