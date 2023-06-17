@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$db_name = "Eventos";
+$db_name = "eventos";
 $username = "root";
 $password = "";
 
@@ -11,9 +11,12 @@ $conn = new mysqli($host, $username, $password, $db_name);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+?>
+<?php
     //conexão
 
     /*CREATE database Eventos;
+    
     CREATE TABLE users (
     id INT(6) UNSIGNED AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
