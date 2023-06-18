@@ -1,11 +1,11 @@
 /* Zera os estilos que vem no navegador */
- body {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- }
+}
 
- /* Estilo para o cabeçalho */
+/* Estilo para o cabeçalho */
 header {
   display: flex;
   justify-content: space-between;
@@ -33,6 +33,8 @@ h1 {
   padding: 8px;
   width: 400px;
   font-size: 16px;
+  border-radius: 2px;
+  border-style: none;
 }
 
 #entrada_pesquisa::placeholder {
@@ -54,7 +56,6 @@ button {
 }
 
 /* Container para os botões de login e criação de conta */
-
 .login_criacao_conta {
   display: flex;
 }
@@ -67,7 +68,7 @@ button {
   margin-left: 100px;
 }
 
-.login a{
+.login a {
   color: #fff;
   text-decoration: none;
 }
@@ -80,7 +81,40 @@ button {
   margin: 0 15px;
 }
 
-.criacao_conta a{
+.criacao_conta a {
   color: #fff;
   text-decoration: none;
+}
+
+/* Event card styles */
+.eventos_destaque {
+  height: 400px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 13%;
+  height: 60%;
+  background-color: #0099cd;
+  color: white;
+  margin-left: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.event-card img {
+  height: 65%;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.event-details {
+  height: 75%;
+}
+
+.event-details p {
+  margin: 0;
+  padding: 5px;
 }
