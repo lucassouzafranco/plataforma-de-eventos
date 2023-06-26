@@ -3,12 +3,14 @@ class User {
     private $nome;
     private $email;
     private $senha;
+    private $tipo_usuario;
 
     // Construtor da classe
-    public function __construct($nome, $email, $senha) {
+    public function __construct($nome, $email, $senha, $tipo_usuario) {
         $this->nome = $nome;
         $this->email = $email;
         $this->senha = $senha;
+        $this->tipo_usuario = $tipo_usuario;
     }
 
     // Getters
