@@ -8,6 +8,7 @@ class Event {
     private $categoria;
     private $preco;
     private $imagens;
+   
 
     // Construtor da classe
     public function __construct($titulo, $descricao, $data, $hora, $local, $categoria, $preco, $imagens) {
@@ -20,7 +21,6 @@ class Event {
         $this->preco = $preco;
         $this->imagens = $imagens;
     }
-
     // Getters
     public function getTitulo() {
         return $this->titulo;
@@ -87,6 +87,7 @@ class Event {
         $this->imagens = $imagens;
     }
 
+    
     // Função para exibir informações do evento
     public function exibirInformacoes() {
         echo "Título: " . $this->titulo . "<br>";
@@ -99,3 +100,6 @@ class Event {
         echo "Imagens: " . implode(", ", $this->imagens) . "<br>";
     }
 }
+
+
+

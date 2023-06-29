@@ -1,11 +1,11 @@
 <?php
-class User {
+class Usuario {
+    private $id;
     private $nome;
     private $email;
     private $senha;
     private $tipo_usuario;
 
-    // Construtor da classe
     public function __construct($nome, $email, $senha, $tipo_usuario) {
         $this->nome = $nome;
         $this->email = $email;
@@ -14,6 +14,10 @@ class User {
     }
 
     // Getters
+    public function getId() {
+        return $this->id;
+    }
+
     public function getNome() {
         return $this->nome;
     }
@@ -26,7 +30,15 @@ class User {
         return $this->senha;
     }
 
+    public function getTipo_usuario() {
+        return $this->tipo_usuario;
+    }
+
     // Setters
+    public function setId($id) {
+        $this->id = $id;
+    }
+
     public function setNome($nome) {
         $this->nome = $nome;
     }
@@ -39,13 +51,9 @@ class User {
         $this->senha = $senha;
     }
 
-    //função login
-    public function login($email, $senha) {
-        if ($email == $this->email && $senha == $this->senha) {
-            return true;
-        } else {
-            return false;
-        }
+    public function setTipo_usuario($tipo_usuario) {
+        $this->tipo_usuario = $tipo_usuario;
     }
+
 }
 

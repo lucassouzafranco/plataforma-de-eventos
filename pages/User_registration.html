@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criacao_conta</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <h1>Cadastro</h1>
-    <div class = "Cadastro">
-        <form action="../functions/Registration.php" method = "post">
+    <div class="Cadastro">
+        <form action="../functions/Registration.php" method="post">
             <label for="Nome Completo">Nome</label>
             <input type="text" name="nome" required>
 
@@ -17,18 +17,17 @@
             <input type="email" name="email" required>
 
             <label>Senha</label>
-            <input type="Senha" name="Senha" required>
+            <input type="password" name="Senha" required>
 
             <label for="tipo_usuario">Tipo de Usuário:</label>
             <select id="tipo_usuario" name="tipo_usuario">
-                <option value="Participante">Participante</option>
-                <option value="Organizador">Organizador</option>
+                <option value="participante">participante</option>
+                <option value="organizador">organizador</option>
             </select>
             
-            
             <input type="submit" value="Cadastrar">
-            <div class = "login">
-                <p>Possui conta?<a href="login.php"> Login</a></p>
+            <div class="login">
+                <p>Possui conta?<a href="login.html"> Login</a></p>
             </div>
         </form>
     </div>
